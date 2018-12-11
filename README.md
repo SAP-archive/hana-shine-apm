@@ -1,10 +1,6 @@
-# hana-shine-apm
-SAP HANA Interactive Education, or SHINE, is a demo application that makes it easy to learn how to build on SAP HANA extended application services advanced model.   This example uses the new application programming model (APM).
+# SAP HANA INteractive Education(SHINE) for Application Programming Model for SAP Cloud Platform
 
-# Description
-
-## SAP HANA INteractive Education(SHINE) for Application Programming Model for SAP Cloud Platform
-
+## Description
 
 This repository aims to educate on building native applications on HANA using the new [application programming model for SAP Cloud Platform](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/00823f91779d4d42aa29a498e0535cdf.html). For more general information on SHINE for XS Advanced, please refer the github repository https://github.com/SAP/hana-shine-xsa
 
@@ -25,12 +21,12 @@ Below is the high level view of the components of the application.
 
 ![Component overview](.docs/component.png "Component overview")
 
-# Requirements
+## Requirements
 
 * XS Advanced Feature Revision 1 for HANA 2.0 SPS03
 * Web IDE for SAP HANA version 4.3.57 or later
 
-# Download and Installation
+## Download and Installation
 
 The below steps describes you to run SHINE for application programming model using 3 approaches. Choose the one that best fits you.
 
@@ -38,7 +34,7 @@ The below steps describes you to run SHINE for application programming model usi
 2. [Generating MTAR using WebIDE and deploy manually to XSA system](#generating-mtar-using-webide-and-deploy-manually-to-xsa-system)
 3. [Generate MTAR using Multi-Target Application Archive Builder and deploy manually to XSA System](#generate-mtar-using-multi-target-application-archive-builder-and-deploy-manually-to-xsa-system)
 
-## Running in SAP Web IDE for SAP HANA
+### Running in SAP Web IDE for SAP HANA
 
 1.  Launch SAP Web IDE for SAP HANA. By default, in SAP HANA, express edition, SAP Web IDE for SAP HANA can be accessed using https://hxehost:53075/
 2.  Right click on the `Workspace` folder in WebIDE and choose `Git` -> `Clone Repository`
@@ -53,7 +49,7 @@ The below steps describes you to run SHINE for application programming model usi
 11. Right click on `web` module navigate to `Run` ->  `Run as Web Application` to run web module
 12. Login to SHINE web application using any user (as we have not secured the service layer but only the web layer) e.g. XSA_ADMIN user can be used to login with his credentials.
 
-## Generating MTAR using WebIDE and deploy manually to XSA system
+### Generating MTAR using WebIDE and deploy manually to XSA system
 #### Generate MTAR using SAP Web IDE for SAP HANA
 1.  Launch SAP Web IDE for SAP HANA
 2.  Navigate to `File`  ->  `Git` ->  `Clone Repository`
@@ -71,7 +67,7 @@ To deploy the mtar, login to the XSA system via CLI and deploy the mtar file usi
 
   `xs deploy hana-shine-apm_1.0.0.mtar`
 
-## Generate MTAR using Multi-Target Application Archive Builder and deploy manually to XSA System
+### Generate MTAR using Multi-Target Application Archive Builder and deploy manually to XSA System
 
 #### Multi-Target Application Archive Builder Pre-requisites
 The MTAR Builder needs Java, Git and Node.js including npm as pre-requisites. If you have one of the tools already installed you can skip the respective steps but make sure that you do not skip the npm configuration with the SAP NPM Registry.
@@ -119,15 +115,15 @@ From the CLI, login into the XSA system and execute the below command:
 
 `xs deploy hana-shine-apm.mtar`
 
-# Known Issues
+## Known Issues
 
 No known issues yet
 
-# How to obtain support
+## How to obtain support
 
 Please use GitHub [issues](https://github.com/SAP/hana-shine-apm/issues/new) for any bugs to be reported.
 
-# License
+## License
 
 The following text should appear in the license section.  
 
