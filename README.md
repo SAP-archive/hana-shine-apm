@@ -132,7 +132,7 @@ Please use GitHub [issues](https://github.com/SAP/hana-shine-apm/issues/new) for
 The following text should appear in the license section.  
 
 Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved.
-This file is licensed under the SAP Sample Code License Agreement except as noted otherwise in the [LICENSE](SAP_Sample_Code_License_Agreementv1.0.docx) file.
+This file is licensed under the SAP Sample Code License Agreement except as noted otherwise in the [LICENSE](SAP_Sample_Code_License_Agreementv1.0.docx) or [CREDITS](/CREDITS) file.
 
 
 
