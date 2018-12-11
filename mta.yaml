@@ -1,0 +1,52 @@
+ID: hana-shine-apm
+_schema-version: '2.0.0'
+version: 1.0.0
+modules:
+  - name: shine-db
+    type: hdb
+    path: db
+    parameters:
+      memory: 256M
+      disk-quota: 256M
+    requires:
+      - name: shine-container
+ 
+  - name: shine-nodejs-srv
+    type: nodejs
+    path: srv
+    parameters:
+      memory: 512M
+      disk-quota: 256M
+    provides:
+      - name: srv_api
+        properties:
+          url: '${default-url}'
+    requires:
+      - name: shine-container
+      
+  - name: shine-web
+    type: html5
+    path: web
+    parameters:
+       disk-quota: 256M
+       memory: 256M
+    requires:
+     - name: srv_api
+       group: destinations
+       properties:
+         forwardAuthToken: true
+         name: srv_api
+         url: '~{url}'
+     - name: shine-uaa
+
+resources:
+  - name: shine-container
+    properties:
+      hdi-container-name: '${service-name}'
+    type: com.sap.xs.hdi-container
+    
+  - name: shine-uaa
+    type: com.sap.xs.uaa
+  
+
+  

@@ -1,0 +1,27 @@
+<Dialog xmlns:sap.ui.core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.commons.layout" id="createDialog"
+	showHeader="true" title="Create New Employee">
+	<l:HorizontalLayout>
+		<f:SimpleForm title="" editable="true" id="empform" layout="ResponsiveGridLayout" labelSpanL="4" labelSpanM="4" emptySpanL="0" emptySpanM="0" columnsL="3"
+			columnsM="3">
+			<f:content title="">
+				<Label design="Bold" id="firstName" text="First Name" class="createNewUserLabelSpacing" labelFor="firstName"/>
+				<Input id="firstNameTextField" required="true" width="100%"/>
+				<Label design="Bold" id="lastName" text="Last Name" class="createNewUserLabelSpacing" labelFor="lastName"/>
+				<Input id="lastNameTextField" required="true" width="100%"/>
+				<Label design="Bold" id="email" text="Email" class="createNewUserLabelSpacing" labelFor="email"/>
+				<Input id="emailTextField" required="true" width="100%"/>
+				<Label design="Bold" id="gender" text="Gender" class="createNewUserLabelSpacing" labelFor="email"/>
+				<RadioButtonGroup id="genderRadioGroup" columns="2" selectedIndex="0" class="sapUiMediumMarginBottom">
+					<buttons>
+						<RadioButton id="RB2-1" text="Male"/>
+						<RadioButton id="RB2-3" text="Female"/>
+					</buttons>
+				</RadioButtonGroup>
+			</f:content>
+		</f:SimpleForm>
+	</l:HorizontalLayout>
+	<buttons>
+		<Button id="create" press="createEmp" text="Create"/>
+		<Button id="close" press="close" text="Close"/>
+	</buttons>
+</Dialog>

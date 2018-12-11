@@ -1,0 +1,42 @@
+<Dialog xmlns:sap.ui.core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.commons.layout" id="editDialog"
+	showHeader="true" title="Update Employee">
+	<!--<l:HorizontalLayout>-->
+		<f:SimpleForm id="empform1" layout="ResponsiveGridLayout" columnsL="4"
+			columnsM="4">
+			<f:content>
+				<Input id="eID" visible="false" value="{ID}"/>
+				<Label design="Bold" id="efirstName" text="First Name" class="createNewUserLabelSpacing" labelFor="firstName"/>
+				<Input id="efirstNameTextField" required="true" value="{firstname}" liveChange="inputChange"/>
+				<Label design="Bold" id="elastName" text="last Name" class="createNewUserLabelSpacing" labelFor="lastName"/>
+				<Input id="elastNameTextField" required="true" value="{lastname}" liveChange="inputChange"/>
+				<Label design="Bold" id="eemail" text="Email" class="createNewUserLabelSpacing" labelFor="email"/>
+				<Input id="eemailTextField" required="true"  value="{email}" liveChange="inputChange"/>
+				<Label design="Bold" id="egender" text="Gender" class="createNewUserLabelSpacing" labelFor="email"/>
+				<RadioButtonGroup id="egenderRadioGroup" columns="2" selectedIndex="{gender}" class="sapUiMediumMarginBottom">
+					<buttons>
+						<RadioButton id="eRB2-1" text="Male" select="inputChange"/>
+						<RadioButton id="eRB2-3" text="Female" select="inputChange"/>
+					</buttons>
+				</RadioButtonGroup>
+				<Label design="Bold" id="emobile" text="Mobile" class="createNewUserLabelSpacing" labelFor="email"/>
+				<Input id="emobileTextField" value="{mobile}" liveChange="inputChange"/>
+				<Label design="Bold" id="estartdate" text="Validity Start" class="createNewUserLabelSpacing" labelFor="email"/>
+				<DatePicker id="estartdateField" displayFormat="long" placeholder="Start date" change="inputChange" value="{startdate}"/>
+				<Label design="Bold" id="eenddate" text="Validity end" class="createNewUserLabelSpacing" labelFor="email"/>
+				<DatePicker id="eenddateField" placeholder="End date" displayFormat="long" change="inputChange" value="{enddate}"/>
+				<Label design="Bold" id="esalary" text="Salary" class="createNewUserLabelSpacing" labelFor="email"/>
+				<Input id="esalaryField" value="{salary}" liveChange="inputChange"/>
+				<Label design="Bold" id="eaccountno" text="Account Number" class="createNewUserLabelSpacing" labelFor="email"/>
+				<Input id="eaccountnoField"  value="{accountno}" liveChange="inputChange"/>
+				<Label design="Bold" id="ebankid" text="Bank ID" class="createNewUserLabelSpacing" labelFor="email"/>
+				<Input id="ebankidField"  value="{bankid}" liveChange="inputChange"/>
+				<Label design="Bold" id="ebankname" text="Bank Name" class="createNewUserLabelSpacing" labelFor="email"/>
+				<Input id="ebanknameField"  value="{bankname}" liveChange="inputChange"/>
+			</f:content>
+		</f:SimpleForm>
+	<!--</l:HorizontalLayout>-->
+	<buttons>
+		<Button id="eupdate" press="updateEmp" text="Update" enabled="false"/>
+		<Button id="eclose" press="close" text="Close"/>
+	</buttons>
+</Dialog>

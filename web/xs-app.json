@@ -1,0 +1,12 @@
+{
+	"welcomeFile": "webapp/index.html",
+	"authenticationMethod": "route",
+	"logout": {
+		"logoutEndpoint": "/do/logout"
+	},
+	"routes": [{
+		"source": "^/catalog/(.*)$",
+		"destination": "srv_api",
+		"authenticationType": "xsuaa"
+	}]
+}
