@@ -22,9 +22,9 @@ Below is the high level view of the components of the application.
 ![Component overview](.docs/component.png "Component overview")
 
 ## Requirements
-
-* XS Advanced Feature Revision 1 for HANA 2.0 SPS03
-* Web IDE for SAP HANA version 4.3.57 or later
+You need the paid version of on-premise installations of the below softwares
+* XS Advanced Feature Revision 1 for HANA 2.0 SPS03 [release note](https://launchpad.support.sap.com/#/notes/2691905) and [patch note](https://launchpad.support.sap.com/#/notes/2709426)
+* Web IDE for SAP HANA version 4.3.57 [release note](https://launchpad.support.sap.com/#/notes/2693571)
 
 ## Download and Installation
 
@@ -124,8 +124,6 @@ No known issues yet
 Please use GitHub [issues](https://github.com/SAP/hana-shine-apm/issues/new) for any bugs to be reported.
 
 ## License
-
-The following text should appear in the license section.  
 
 Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved.
 This file is licensed under the SAP Sample Code License Agreement except as noted otherwise in the [LICENSE](SAP_Sample_Code_License_Agreementv1.0.docx) or [CREDITS](/CREDITS) file.
