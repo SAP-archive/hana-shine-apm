@@ -1,0 +1,18 @@
+/* Enter your custom styles here */
+.segmentedButton{
+	margin-left:45%;
+	margin-top:2%;
+}
+.sapUiMnuNoSbMnu>.sapUiMnuItm>.sapUiMnuItmTxt, .sapUiMnuItm.sapUiMnuTfItm>.sapUiMnuItmTxt {
+    padding-right: 0.5rem;
+    width: 84px;
+}
+.deleteButton{
+	color:red !important;
+}
+#__label0-bdi{
+	font-weight:bold;
+}
+#edlgpocrn{
+	width: 800px;
+}

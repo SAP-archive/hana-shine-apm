@@ -1,0 +1,50 @@
+ID: hana-shine-apm-java
+_schema-version: '2.1'
+version: 1.0.0
+modules:
+  - name: shine-db
+    type: hdb
+    path: db
+    parameters:
+      memory: 256M
+      disk-quota: 256M
+    requires:
+      - name: shine-container
+      
+  - name: shine-srv
+    type: java
+    path: srv
+    parameters:
+      memory: 1024M
+      disk-quota: 256M
+    provides:
+      - name: srv_api
+        properties:
+          url: '${default-url}'
+    requires:
+      - name: shine-container
+        properties:
+          JBP_CONFIG_RESOURCE_CONFIGURATION: >-
+            [tomcat/webapps/ROOT/META-INF/context.xml:
+            {"service_name_for_DefaultDB" : "~{hdi-container-name}"}]
+
+  - name: shine-web
+    type: html5
+    path: web
+    requires:
+     - name: shine-uaa
+     - name: srv_api
+       group: destinations
+       properties:
+         forwardAuthToken: true
+         name: srv_api
+         url: '~{url}'
+
+resources:
+  - name: shine-container
+    properties:
+      hdi-container-name: '${service-name}'
+    type: com.sap.xs.hdi-container
+  
+  - name: shine-uaa
+    type: com.sap.xs.uaa

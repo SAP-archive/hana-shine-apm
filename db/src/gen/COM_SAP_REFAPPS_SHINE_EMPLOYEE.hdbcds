@@ -1,0 +1,14 @@
+entity COM_SAP_REFAPPS_SHINE_EMPLOYEE {
+  key ID : Integer;
+  FIRSTNAME : String(5000);
+  LASTNAME : String(5000);
+  EMAIL : String(5000);
+  GENDER : Integer;
+  MOBILE : String(12);
+  STARTDATE : LocalDate;
+  ENDDATE : LocalDate;
+  SALARY : Double;
+  ACCOUNTNO : String(5000);
+  BANKID : String(5000);
+  BANKNAME : String(5000);
+};

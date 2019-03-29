@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+  <edmx:DataServices m:DataServiceVersion="2.0">
+    <Schema Namespace="EmployeeService" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Employee" EntityType="EmployeeService.Employee"/>
+      </EntityContainer>
+      <EntityType Name="Employee">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="firstname" Type="Edm.String"/>
+        <Property Name="lastname" Type="Edm.String"/>
+        <Property Name="email" Type="Edm.String"/>
+        <Property Name="gender" Type="Edm.Int32"/>
+        <Property Name="mobile" Type="Edm.String" MaxLength="12"/>
+        <Property Name="startdate" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="enddate" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="salary" Type="Edm.Double"/>
+        <Property Name="accountno" Type="Edm.String"/>
+        <Property Name="bankid" Type="Edm.String"/>
+        <Property Name="bankname" Type="Edm.String"/>
+      </EntityType>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

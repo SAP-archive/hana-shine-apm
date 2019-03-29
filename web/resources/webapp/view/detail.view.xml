@@ -1,0 +1,89 @@
+<mvc:View sId="detail" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
+	xmlns:l="sap.ui.layout" controllerName="com.sap.refapps.shine.web.controller.detail">
+	<App>
+		<pages>
+			<Page id="detailPage" showNavButton="true" navButtonPress="onBack">
+				<customHeader>
+					<Bar>
+						<contentLeft>
+							<Button press="onBack" tooltip="Back" icon="sap-icon://nav-back"/>
+						</contentLeft>
+						<contentMiddle>
+							<Image src="images/sap_18.png"/>
+							<Label id="header" design="Bold" text="{i18n>title}"/>
+						</contentMiddle>
+						<contentRight>
+							<OverflowToolbar id="otbFooter">
+								<ToolbarSpacer/>
+								<OverflowToolbarButton text="Edit" icon="sap-icon://edit" press="onEdit"/>
+								<OverflowToolbarButton text="Delete" icon="sap-icon://delete" press="onDelete"/>
+							</OverflowToolbar>
+						</contentRight>
+					</Bar>
+				</customHeader>
+				<content>
+					<IconTabBar id="empIconTabBar" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+						<items>
+							<IconTabFilter key="personal" text="Personal Info" icon="sap-icon://employee">
+								<VBox class="sapUiSmallMargin">
+									<f:SimpleForm id="personalForm" editable="false" layout="ResponsiveGridLayout" title="Personal Info" labelSpanXL="4" labelSpanL="3"
+										labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2"
+										columnsL="1" columnsM="1" singleContainerFullSize="false">
+										<f:content>
+											<Label text="Employee ID"/>
+											<Text id="empId" text="{ID}"/>
+											<Label design="Bold" text="Employee Full Name"/>
+											<Text text="{firstname} {lastname}"/>
+											<Label design="Bold" text="Employee First Name"/>
+											<Text text="{firstname}"/>
+											<Label design="Bold" text="Employee Last Name"/>
+											<Text text="{lastname}"/>
+											<Label design="Bold" text="Gender"/>
+											<Text id="gender" text="{= ${gender} === 0 ? 'Male':'Female'}"/>
+											<Label design="Bold" text="Validity Start"/>
+											<Text text="{path:'startdate'}"/>
+											<Label design="Bold" text="Validity End"/>
+											<Text text="{path:'enddate'}"/>
+										</f:content>
+									</f:SimpleForm>
+								</VBox>
+							</IconTabFilter>
+							<IconTabFilter key="account" text="Account Info" icon="sap-icon://account">
+								<VBox class="sapUiSmallMargin">
+									<f:SimpleForm id="accountForm" editable="false" layout="ResponsiveGridLayout" title="Account Info" labelSpanXL="4" labelSpanL="3"
+										labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2"
+										columnsL="1" columnsM="1" singleContainerFullSize="false">
+										<f:content>
+											<Label design="Bold" text="Salary"/>
+											<Text text="{salary}"/>
+											<Label design="Bold" text="Account Number"/>
+											<Text text="{accountno}"/>
+											<Label design="Bold" text="Bank ID"/>
+											<Text text="{bankid}"/>
+											<Label design="Bold" text="Bank Name"/>
+											<Text text="{bankname}"/>
+										</f:content>
+									</f:SimpleForm>
+								</VBox>
+							</IconTabFilter>
+							<IconTabFilter key="contact" text="Contact Info" icon="sap-icon://contacts">
+								<VBox class="sapUiSmallMargin">
+									<f:SimpleForm id="contactForm" editable="false" layout="ResponsiveGridLayout" title="Contact Info" labelSpanXL="4" labelSpanL="3"
+										labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2"
+										columnsL="1" columnsM="1" singleContainerFullSize="false">
+										<f:content>
+											<Label design="Bold" text="Employee Email ID"/>
+											<Text text="{email}"/>
+											<Label design="Bold" text="Employee Mobile"/>
+											<Text text="{path:'mobile'}"/>
+										</f:content>
+									</f:SimpleForm>
+								</VBox>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

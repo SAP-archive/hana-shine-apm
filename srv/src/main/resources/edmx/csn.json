@@ -1,0 +1,198 @@
+{
+  "definitions": {
+    "EmployeeService": {
+      "kind": "service",
+      "@source": "srv/employee-service.cds"
+    },
+    "EmployeeService.Employee": {
+      "kind": "entity",
+      "source": "com.sap.refapps.shine.Employee",
+      "elements": {
+        "ID": {
+          "origin": "com.sap.refapps.shine.Employee..ID",
+          "indexNo": 1,
+          "value": {
+            "=": "Employee.ID"
+          },
+          "key": true,
+          "type": "cds.Integer",
+          "@cds.persistence.name": "ID"
+        },
+        "firstname": {
+          "origin": "com.sap.refapps.shine.Employee..firstname",
+          "indexNo": 2,
+          "value": {
+            "=": "Employee.firstname"
+          },
+          "type": "cds.String",
+          "@cds.persistence.name": "FIRSTNAME"
+        },
+        "lastname": {
+          "origin": "com.sap.refapps.shine.Employee..lastname",
+          "indexNo": 3,
+          "value": {
+            "=": "Employee.lastname"
+          },
+          "type": "cds.String",
+          "@cds.persistence.name": "LASTNAME"
+        },
+        "email": {
+          "origin": "com.sap.refapps.shine.Employee..email",
+          "indexNo": 4,
+          "value": {
+            "=": "Employee.email"
+          },
+          "type": "cds.String",
+          "@cds.persistence.name": "EMAIL"
+        },
+        "gender": {
+          "origin": "com.sap.refapps.shine.Employee..gender",
+          "indexNo": 5,
+          "value": {
+            "=": "Employee.gender"
+          },
+          "type": "cds.Integer",
+          "@cds.persistence.name": "GENDER"
+        },
+        "mobile": {
+          "origin": "com.sap.refapps.shine.Employee..mobile",
+          "indexNo": 6,
+          "value": {
+            "=": "Employee.mobile"
+          },
+          "type": "cds.String",
+          "length": 12,
+          "@cds.persistence.name": "MOBILE"
+        },
+        "startdate": {
+          "origin": "com.sap.refapps.shine.Employee..startdate",
+          "indexNo": 7,
+          "value": {
+            "=": "Employee.startdate"
+          },
+          "type": "cds.Date",
+          "@cds.persistence.name": "STARTDATE"
+        },
+        "enddate": {
+          "origin": "com.sap.refapps.shine.Employee..enddate",
+          "indexNo": 8,
+          "value": {
+            "=": "Employee.enddate"
+          },
+          "type": "cds.Date",
+          "@cds.persistence.name": "ENDDATE"
+        },
+        "salary": {
+          "origin": "com.sap.refapps.shine.Employee..salary",
+          "indexNo": 9,
+          "value": {
+            "=": "Employee.salary"
+          },
+          "type": "cds.Double",
+          "@cds.persistence.name": "SALARY"
+        },
+        "accountno": {
+          "origin": "com.sap.refapps.shine.Employee..accountno",
+          "indexNo": 10,
+          "value": {
+            "=": "Employee.accountno"
+          },
+          "type": "cds.String",
+          "@cds.persistence.name": "ACCOUNTNO"
+        },
+        "bankid": {
+          "origin": "com.sap.refapps.shine.Employee..bankid",
+          "indexNo": 11,
+          "value": {
+            "=": "Employee.bankid"
+          },
+          "type": "cds.String",
+          "@cds.persistence.name": "BANKID"
+        },
+        "bankname": {
+          "origin": "com.sap.refapps.shine.Employee..bankname",
+          "indexNo": 12,
+          "value": {
+            "=": "Employee.bankname"
+          },
+          "type": "cds.String",
+          "@cds.persistence.name": "BANKNAME"
+        }
+      },
+      "@cds.persistence.name": "EMPLOYEESERVICE_EMPLOYEE"
+    },
+    "com.sap.refapps.shine.Employee": {
+      "kind": "entity",
+      "elements": {
+        "ID": {
+          "key": true,
+          "indexNo": 1,
+          "type": "cds.Integer",
+          "@cds.persistence.name": "ID"
+        },
+        "firstname": {
+          "indexNo": 2,
+          "type": "cds.String",
+          "@cds.persistence.name": "FIRSTNAME"
+        },
+        "lastname": {
+          "indexNo": 3,
+          "type": "cds.String",
+          "@cds.persistence.name": "LASTNAME"
+        },
+        "email": {
+          "indexNo": 4,
+          "type": "cds.String",
+          "@cds.persistence.name": "EMAIL"
+        },
+        "gender": {
+          "indexNo": 5,
+          "type": "cds.Integer",
+          "@cds.persistence.name": "GENDER"
+        },
+        "mobile": {
+          "indexNo": 6,
+          "type": "cds.String",
+          "length": 12,
+          "@cds.persistence.name": "MOBILE"
+        },
+        "startdate": {
+          "indexNo": 7,
+          "type": "cds.Date",
+          "@cds.persistence.name": "STARTDATE"
+        },
+        "enddate": {
+          "indexNo": 8,
+          "type": "cds.Date",
+          "@cds.persistence.name": "ENDDATE"
+        },
+        "salary": {
+          "indexNo": 9,
+          "type": "cds.Double",
+          "@cds.persistence.name": "SALARY"
+        },
+        "accountno": {
+          "indexNo": 10,
+          "type": "cds.String",
+          "@cds.persistence.name": "ACCOUNTNO"
+        },
+        "bankid": {
+          "indexNo": 11,
+          "type": "cds.String",
+          "@cds.persistence.name": "BANKID"
+        },
+        "bankname": {
+          "indexNo": 12,
+          "type": "cds.String",
+          "@cds.persistence.name": "BANKNAME"
+        }
+      },
+      "@cds.persistence.name": "COM_SAP_REFAPPS_SHINE_EMPLOYEE"
+    }
+  },
+  "version": {
+    "creator": "CDS Compiler v1.1.3",
+    "csn": "0.1.0"
+  },
+  "@sql_mapping": "plain"
+}

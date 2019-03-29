@@ -1,0 +1,11 @@
+{
+	"welcomeFile": "webapp/index.html",
+	"authenticationMethod": "route",
+	"logout": {
+		"logoutEndpoint": "/do/logout"
+	},
+	"routes": [{
+		"source": "/odata/v2/EmployeeService/",
+		"destination": "srv_api"
+	}]
+}

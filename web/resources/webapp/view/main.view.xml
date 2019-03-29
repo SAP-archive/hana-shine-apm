@@ -1,0 +1,80 @@
+<mvc:View controllerName="com.sap.refapps.shine.web.controller.main" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App id="idAppControl">
+		<pages>
+			<Page class="sapUiContentPadding">
+				<customHeader>
+					<Bar>
+						<contentLeft>
+							<!--<Image src="images/sap_18.png"/>-->
+						</contentLeft>
+						<contentMiddle>
+							<Image src="images/sap_18.png"/>
+							<Label id="header" design="Bold" text="{i18n>title}"/>
+						</contentMiddle>
+						<contentRight>
+							<Button id="logoutBtn" tooltip="Logout" icon="sap-icon://log" press="onLogoutPress"/>
+						<!--	<Button id="displayName" text="User Name" icon="sap-icon://account" press="handlePressOpenMenu"/>-->
+						</contentRight>
+					</Bar>
+				</customHeader>
+				<content>
+					<Table growing="true" growingThreshold="5" noDataText="No Employee found" id="emptable"
+						items="{ path: '/Employee', parameters: {$select:'ID,firstname,lastname,email,startdate',$count: true, $$updateGroupId : 'UserGroup' } }"
+						includeItemInSelection="false" mode="SingleSelectLeft" select="onSelection">
+						<items>
+							<ColumnListItem id="item0" type="Navigation" press="onItemPress">
+								<cells>
+									<Text text="{firstname}"/>
+									<Text text="{lastname}"/>
+									<Text text="{= ${gender} === 0 ?'Male':'Female'}"/>
+									<Text text="{email}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+						<columns>
+							<Column id="column1">
+								<header>
+									<Label text="First Name" id="label1"/>
+								</header>
+							</Column>
+							<Column id="column2">
+								<header>
+									<Label text="Last Name" id="label2"/>
+								</header>
+							</Column>
+							<Column id="column3">
+								<header>
+									<Label text="Gender" id="label3"/>
+								</header>
+							</Column>
+							<Column id="column4">
+								<header>
+									<Label text="Email" id="label4"/>
+								</header>
+							</Column>
+						</columns>
+						<headerToolbar>
+							<OverflowToolbar width="100%" id="toolbar1">
+								<content>
+									<Title text="Employee List" level="H2"/>
+									<ToolbarSpacer/>
+									<SearchField id="searchField" width="20%" placeholder="Search" search="onSearch"/>
+									<Button id="refreshEmployeeButton" icon="sap-icon://refresh" enabled="{= !${appView>/hasUIChanges}}" tooltip="Refresh table"
+										press="onRefreshPress"/>
+									<Button id="addEmployeeButton" icon="sap-icon://add" tooltip="Create" enabled="{= !${appView>/hasUIChanges}}" press="onCreate">
+										<layoutData>
+											<OverflowToolbarLayoutData priority="NeverOverflow"/>
+										</layoutData>
+									</Button>
+									<Button id="deleteButton" tooltip="Delete" class="deleteButton" icon="sap-icon://delete" press="onDelete" enabled="false"/>
+									<Button id="sortUsersButton" press="onSort" tooltip="Sort" icon="sap-icon://sort"/>
+								</content>
+							</OverflowToolbar>
+						</headerToolbar>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
