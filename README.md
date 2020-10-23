@@ -1,5 +1,7 @@
 # SAP HANA INteractive Education(SHINE) for Application Programming Model for SAP Cloud Platform
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/hana-shine-apm)](https://api.reuse.software/info/github.com/SAP-samples/hana-shine-apm)
+
 ## Description
 
 This repository aims to educate on building native applications on HANA using the new [application programming model for SAP Cloud Platform](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/00823f91779d4d42aa29a498e0535cdf.html). For more general information on SHINE for XS Advanced, please refer the github repository https://github.com/SAP/hana-shine-xsa
