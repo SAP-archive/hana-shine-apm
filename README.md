@@ -1,18 +1,18 @@
-# SAP HANA INteractive Education(SHINE) for Application Programming Model for SAP Cloud Platform
+# SAP HANA INteractive Education (SHINE) for SAP Cloud Application Programming Model
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/hana-shine-apm)](https://api.reuse.software/info/github.com/SAP-samples/hana-shine-apm)
 
 ## Description
 
-This repository aims to educate on building native applications on HANA using the new [application programming model for SAP Cloud Platform](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/00823f91779d4d42aa29a498e0535cdf.html). For more general information on SHINE for XS Advanced, please refer the github repository https://github.com/SAP/hana-shine-xsa
+This repository aims to educate on building native applications on HANA using the new [SAP Cloud Application Programming Model](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/00823f91779d4d42aa29a498e0535cdf.html). For more general information on SHINE for XS Advanced, please refer to the github repository https://github.com/SAP/hana-shine-xsa.
 
 ### Business Scenario 
 
-The business scenario is that of an admin of a fictious company trying to maintain the employees i.e. create new employee details, delete employee information and update the employee information. We call this scenario as Employee List.
+The business scenario is that of an admin of a fictious company trying to maintain the employees i.e. create new employee details, delete employee information and update the employee information. We call this scenario "Employee List."
 
 ### Technical details 
 
-The application is implemented using Application Programming Model for SAP Cloud Platform. As such, we have the below mentioned application layers.
+The application is implemented using SAP Cloud Application Programming Model. As such, we have the below mentioned application layers.
 
 - The data model is implemented using CDS 
 - The OData service is implemented using Node.js V4
@@ -30,7 +30,7 @@ You need the paid version of on-premise installations of the below softwares
 
 ## Download and Installation
 
-The below steps describes you to run SHINE for application programming model using 3 approaches. Choose the one that best fits you.
+The below steps describes how to run SHINE for the SAP Cloud Application Programming Model using 3 approaches. Choose the one that best fits you.
 
 1. [Running in SAP Web IDE for SAP HANA](#running-in-sap-web-ide-for-sap-hana)
 2. [Generating MTAR using WebIDE and deploy manually to XSA system](#generating-mtar-using-webide-and-deploy-manually-to-xsa-system)
@@ -119,7 +119,7 @@ From the CLI, login into the XSA system and execute the below command:
 
 ## Known Issues
 
-No known issues yet
+No known issues.
 
 ## How to obtain support
 
